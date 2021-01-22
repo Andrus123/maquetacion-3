@@ -28,8 +28,9 @@
 }
 
 .logo{
-    flex-grow: 1;
-    flex-basis: 65%;
+    flex-grow: 1; /*para que aparte de contar su tamaño preestablecido, si se reduce la pantalla, mantenga ese espacio*/
+    flex-basis: 60%;
+
     padding: 10px;
     margin-left: 20px;
     color: black;
@@ -42,4 +43,34 @@
     font-style: italic;
     font-weight: 900;
     font-size: 35px;
+}
+
+#menu{
+    flex-grow: 1;
+    flex-basis: 35%;
+    height: 100%;
+    padding-right: 20px;
+}
+
+#menu > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    list-style: none;
+}
+
+#menu a{
+    text-transform: uppercase;
+    color: #444;
+    padding:15px;
+    transition: all 250ms;
+}
+
+#menu a:hover{
+    background: #ccc;
+    color: white;
 }
